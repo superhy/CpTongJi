@@ -38,4 +38,7 @@
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 
+	<import resource="struts_spring_xml/daoCpContext.xml" />
+	<import resource="struts_spring_xml/fetchContext.xml" />
+
 </beans>

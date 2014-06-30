@@ -21,7 +21,7 @@
 	</bean>
 
 	<bean id="changMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
-		<property name="mapperInterface" ref="org.ailab.dao.ChangMapper"></property>
+		<property name="mapperInterface" value="org.ailab.dao.ChangMapper"></property>
 		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
 	</bean>
 	<bean id="changService" class="org.ailab.service.ChangServiceImpl">
@@ -29,7 +29,7 @@
 	</bean>
 
 	<bean id="shengfurecMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
-		<property name="mapperInterface" ref="org.ailab.dao.ShengfurecMapper"></property>
+		<property name="mapperInterface" value="org.ailab.dao.ShengfurecMapper"></property>
 		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
 	</bean>
 	<bean id="shengfurecService" class="org.ailab.service.ShengfurecServiceImpl">

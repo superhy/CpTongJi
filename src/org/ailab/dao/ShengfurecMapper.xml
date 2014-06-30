@@ -5,7 +5,7 @@
 <mapper namespace="org.ailab.dao.ShengfurecMapper">
 
 	<insert id="add" parameterType="Shengfurec">
-		insert into tbl_shengfurrec
+		insert into tbl_shengfurec
 		(changId, rang, s, p, f, crawlTime) value (#{changId}, #{rang}, #{s},
 		#{p}, #{f}, #{crawlTime})
 	</insert>

@@ -10,9 +10,9 @@
 
 	<!-- 将mapper文件加入到配置文件中 -->
 	<mappers>
-		<mapper resource="org/ailab/dao/TeamMapper" />
-		<mapper resource="org/ailab/dao/ChangMapper" />
-		<mapper resource="org/ailab/dao/ShengfurecMapper" />
+		<mapper resource="org/ailab/dao/TeamMapper.xml" />
+		<mapper resource="org/ailab/dao/ChangMapper.xml" />
+		<mapper resource="org/ailab/dao/ShengfurecMapper.xml" />
 	</mappers>
 
 </configuration>
