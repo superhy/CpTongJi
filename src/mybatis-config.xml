@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<!-- 自动扫描命名类包 -->
+	<typeAliases>
+		<package name="org.ailab.model" />
+	</typeAliases>
+
+	<!-- 将mapper文件加入到配置文件中 -->
+	<mappers>
+		<mapper resource="org/ailab/dao/TeamMapper" />
+		<mapper resource="org/ailab/dao/ChangMapper" />
+		<mapper resource="org/ailab/dao/ShengfurecMapper" />
+	</mappers>
+
+</configuration>

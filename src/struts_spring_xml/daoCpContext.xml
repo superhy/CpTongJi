@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+	<bean id="teamMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.ailab.dao.TeamMapper"></property>
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+	</bean>
+	<bean id="teamService" class="org.ailab.service.TeamServiceImpl">
+		<property name="teamMapper" ref="teamMapper"></property>
+	</bean>
+
+	<bean id="changMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" ref="org.ailab.dao.ChangMapper"></property>
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+	</bean>
+	<bean id="changService" class="org.ailab.service.ChangServiceImpl">
+		<property name="changMapper" ref="changMapper"></property>
+	</bean>
+
+	<bean id="shengfurecMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" ref="org.ailab.dao.ShengfurecMapper"></property>
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+	</bean>
+	<bean id="shengfurecService" class="org.ailab.service.ShengfurecServiceImpl">
+		<property name="shengfurecMapper" ref="shengfurecMapper"></property>
+	</bean>
+
+</beans>

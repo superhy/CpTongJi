@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.ailab.dao.ShengfurecMapper">
+
+	<insert id="add" parameterType="Shengfurec">
+		insert into tbl_shengfurrec
+		(changId, rang, s, p, f, crawlTime) value (#{changId}, #{rang}, #{s},
+		#{p}, #{f}, #{crawlTime})
+	</insert>
+
+	<delete id="deletById" parameterType="int">
+		delete from tbl_shengfurec
+		where recId = #{recId}
+	</delete>
+
+	<update id="update" parameterType="Shengfurec">
+		update tbl_shengfurec set
+		changId = #{changId}, rang = #{rang}, s = #{s}, p = #{p}, f = #{f}
+		crawlTime = #{crawlTime} where recId = #{recId}
+	</update>
+
+	<select id="listByChangId" parameterType="int" resultType="Shengfurec">
+		select * from tbl_shengfurec where changId = #{changId}
+	</select>
+
+	<select id="loadById" parameterType="int" resultType="Shengfurec">
+		select *
+		from tbl_shengfurec where recId = #{recId}
+	</select>
+
+</mapper>

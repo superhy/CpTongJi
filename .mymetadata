@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="CpTongJi_0.1beta"
+  id="myeclipse.1404042505567"
+  context-root="/CpTongJi_0.1beta"
+  j2ee-spec="5.0"
+  archive="CpTongJi_0.1beta.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

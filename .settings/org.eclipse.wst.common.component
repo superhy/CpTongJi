@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="CpTongJi_0.1beta">
+        <wb-resource deploy-path="/" source-path="/WebRoot"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="/CpTongJi_0.1beta"/>
+        <property name="java-output-path" value="/CpTongJi_0.1beta/WebRoot/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>
