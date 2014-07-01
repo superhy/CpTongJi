@@ -1,8 +1,7 @@
 package org.ailab.cache;
 
 public class FetchShengfurecQuery {
-	
-	
+
 	public static String BET_CONTENT_QUERY = "div#bet_content";
 	public static String BET_ONEDAY_QUERY = "table.bet_table";
 	public static String BET_ELEMENT_QUERY = "tbody>tr";
