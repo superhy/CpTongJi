@@ -64,16 +64,16 @@ public class FetchShengfurec {
 
 		Elements elesAllDayContent = this.getAllDayContent(eleBetContent);
 		for (Element eleEachDayContent : elesAllDayContent) {
-			
+
 			// System.out.println(eleEachDayContent);
-			
+
 			Elements elesAllBetContentInDay = this
 					.getAllBetContentInDay(eleEachDayContent);
 
 			for (Element eleEachBetContentInDay : elesAllBetContentInDay) {
-				
+
 				// System.out.println(eleEachBetContentInDay);
-				
+
 				String strMatchTime = eleEachBetContentInDay.select(
 						FetchShengfurecQuery.BET_TIME_QUERY).first().attr(
 						"pendtime");
@@ -86,6 +86,9 @@ public class FetchShengfurec {
 
 				Chang chang = this.handleFetchShengfurecRes.handleChangContent(
 						strMatchTime, hostTeamName, guestTeamName);
+				if (chang == null) {
+					continue;
+				}
 
 				Element eleRang0Content = eleEachBetContentInDay.select(
 						FetchShengfurecQuery.RANG0_ELEMENT_QUERY).first();

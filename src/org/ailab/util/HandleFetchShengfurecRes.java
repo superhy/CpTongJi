@@ -31,8 +31,12 @@ public class HandleFetchShengfurecRes {
 		if (changCheck == null) {
 
 			Team hostTeam = this.teamService.loadByTeamName(hostTeamName);
-			int hostTeamId = hostTeam.getTeamId();
 			Team guestTeam = this.teamService.loadByTeamName(guestTeamName);
+			if (hostTeam == null || guestTeam == null) {
+				return null;
+			}
+
+			int hostTeamId = hostTeam.getTeamId();
 			int guestTeamId = guestTeam.getTeamId();
 
 			Chang changInsert = new Chang(hostTeamId, hostTeamName,
